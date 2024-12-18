@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "src/content/posts/guide/index.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -162,7 +162,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c1542d256518bc6f",
+  "active": "77a4540d3a3cd5a3",
   "lastOpenFiles": [
     "src/content/posts/guide/index.md",
     "src/content/posts/markdown.md",

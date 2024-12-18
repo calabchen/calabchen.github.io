@@ -16,7 +16,6 @@ This article is currently in a draft state and is not published. Therefore, it w
 When the article is ready for publication, you can update the "draft" field to "false" in the Frontmatter:
 
 ```markdown
----
 title: Draft Example
 published: 2024-01-11T04:40:26.381Z
 tags: [Markdown, Blogging, Demo]
@@ -219,7 +218,7 @@ Critical content demanding immediate user attention due to potential risks.
 Negative potential consequences of an action.
 :::
 
-## Basic Syntax
+# Basic Syntax
 
 ```markdown
 :::note
@@ -231,7 +230,7 @@ Optional information to help a user be more successful.
 :::
 ```
 
-## Custom Titles
+# Custom Titles
 
 The title of the admonition can be customized.
 
@@ -245,7 +244,7 @@ This is a note with a custom title.
 :::
 ```
 
-### GitHub Syntax
+# GitHub Syntax
 
 > [!TIP]
 > [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
