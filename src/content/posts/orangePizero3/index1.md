@@ -3,13 +3,15 @@ title: orangePiZero3折腾之路：1
 published: 2024-09-12
 description: ""
 tags:
-  - orangePiZero3
+  - OrangePiZero3
 category: 开发板
 draft: false
 ---
+
 :::caution
 随着时间的推移，文章内容可能过期，请关注网上其他文章的最新动态
 :::
+
 # 香橙派
 
 ## 烧录系统

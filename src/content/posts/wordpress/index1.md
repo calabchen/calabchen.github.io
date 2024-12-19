@@ -3,13 +3,15 @@ title: WordPress网站安装wp-statistic插件以及汉化
 published: 2024-09-20
 description: ""
 tags:
-  - wordpress
-category: wordpress
+  - Wordpress
+category: Wordpress
 draft: false
 ---
+
 :::caution
 随着时间的推移，文章内容可能过期，请关注网上其他文章的最新动态
 :::
+
 ## 安装插件
 
 进入“管理后台”，点击“插件”，点击左上角的“安装新插件”
