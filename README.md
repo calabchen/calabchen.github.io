@@ -1,11 +1,11 @@
-# 🍥Fuwari
+> README 版本：`2024-12-19`
 
-基于 [Astro](https://astro.build) 开发的静态博客模板。
+
+# 使用的博客模板
+
+`🍥Fuwari`: 基于 [Astro](https://astro.build) 开发的静态博客模板。
 
 [**🖥️在线预览（Vercel）**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**📦旧 Hexo 版本**](https://github.com/saicaca/hexo-theme-vivia)
-
-> README 版本：`2024-09-10`
 
 ![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
 
@@ -16,9 +16,9 @@
 - [x] 亮色 / 暗色模式
 - [x] 自定义主题色和横幅图片
 - [x] 响应式设计
-- [ ] 评论
+- [x] 评论
 - [x] 搜索
-- [ ] 文内目录
+- [x] 文内目录
 
 ## 🚀 使用方法
 
