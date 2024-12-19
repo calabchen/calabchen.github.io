@@ -9,19 +9,52 @@ category: Guides
 draft: false
 ---
 
-# This Article is a Draft
+:::tip
+> Cover ☝️ image source 👉: [Source](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/208fc754-890d-4adb-9753-2c963332675d/width=2048/01651-1456859105-(colour_1.5),girl,_Blue,yellow,green,cyan,purple,red,pink,_best,8k,UHD,masterpiece,male%20focus,%201boy,gloves,%20ponytail,%20long%20hair,.jpeg)
 
-This article is currently in a draft state and is not published. Therefore, it will not be visible to the general audience. The content is still a work in progress and may require further editing and review.
+🤔This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
+:::
 
-When the article is ready for publication, you can update the "draft" field to "false" in the Frontmatter:
+# Front-matter of Posts
 
-```markdown
-title: Draft Example
-published: 2024-01-11T04:40:26.381Z
-tags: [Markdown, Blogging, Demo]
-category: Examples
+```yaml
+---
+title: My First Blog Post
+published: 2023-09-09
+description: This is the first post of my new Astro blog.
+image: ./cover.jpg
+tags: [Foo, Bar]
+category: Front-end
 draft: false
+---
 ```
+
+| Attribute     | Description                                                                                                                                                                                                 |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `title`       | The title of the post.                                                                                                                                                                                      |
+| `published`   | The date the post was published.                                                                                                                                                                            |
+| `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
+| `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
+| `tags`        | The tags of the post.                                                                                                                                                                                       |
+| `category`    | The category of the post.                                                                                                                                                                                   |
+| `draft`        | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
+:::note
+When the article is ready for publication, you can update the "draft" field to `false` in the Frontmatter. But if you do not want to publish your article, please keep the "draft" state `true`
+:::
+
+# Where to Place the Post Files
+
+Your post files should be placed in `src/content/posts/` directory. You can also create sub-directories to better organize your posts and assets.
+
+```
+src/content/posts/
+├── post-1.md
+└── post-2/
+    ├── cover.png
+    └── index.md
+```
+
+# Basic Markdown Syntax
 
 # An h1 header
 
@@ -110,9 +143,7 @@ Now a nested list:
 Notice again how text always lines up on 4-space indents (including
 that last line which continues item 3 above).
 
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
+Here's a link to [a website](http://foo.bar), to a [local doc](local-doc.html), and to a [section heading in the current doc](#an-h2-header). Here's a footnote [^1].
 
 [^1]: Footnote text goes here.
 
@@ -122,14 +153,11 @@ size material color
 
 ---
 
-9 leather brown
-10 hemp canvas natural
-11 glass transparent
+9 leather brown 10 hemp canvas natural 11 glass transparent
 
 Table: Shoes, their sizes, and what they're made of
 
-(The above is the caption for the table.) Pandoc also supports
-multi-line tables:
+(The above is the caption for the table.) Pandoc also supports multi-line tables:
 
 ---
 
@@ -165,9 +193,7 @@ term/definition pair to spread things out more.)
 
 Here's a "line block":
 
-| Line one
-| Line too
-| Line tree
+| Line one | Line too | Line tree
 
 and images can be specified like so:
 
@@ -181,9 +207,9 @@ $$I = \int \rho R^{2} dV$$
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
 
----
+# Markdown Extended Features
 
-# GitHub Repository Cards
+## GitHub Repository Cards
 You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
 
 ::github{repo="Fabrizz/MMM-OnSpotify"}
@@ -194,7 +220,7 @@ Create a GitHub repository card with the code `::github{repo="<owner>/<repo>"}`.
 ::github{repo="saicaca/fuwari"}
 ```
 
-# Admonitions
+## Admonitions
 
 Following types of admonitions are supported: `note` `tip` `important` `warning` `caution`
 
@@ -218,7 +244,7 @@ Critical content demanding immediate user attention due to potential risks.
 Negative potential consequences of an action.
 :::
 
-# Basic Syntax
+### Basic Syntax
 
 ```markdown
 :::note
@@ -230,7 +256,7 @@ Optional information to help a user be more successful.
 :::
 ```
 
-# Custom Titles
+### Custom Titles
 
 The title of the admonition can be customized.
 
@@ -244,7 +270,7 @@ This is a note with a custom title.
 :::
 ```
 
-# GitHub Syntax
+### GitHub Syntax
 
 > [!TIP]
 > [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
@@ -257,46 +283,7 @@ This is a note with a custom title.
 > The GitHub syntax is also supported.
 ```
 
-
-> Cover image source: [Source](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/208fc754-890d-4adb-9753-2c963332675d/width=2048/01651-1456859105-(colour_1.5),girl,_Blue,yellow,green,cyan,purple,red,pink,_best,8k,UHD,masterpiece,male%20focus,%201boy,gloves,%20ponytail,%20long%20hair,.jpeg)
-
-This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
-
-# Front-matter of Posts
-
-```yaml
----
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
-draft: false
----
-```
-
-| Attribute     | Description                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `title`       | The title of the post.                                                                                                                                                                                      |
-| `published`   | The date the post was published.                                                                                                                                                                            |
-| `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
-| `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
-| `tags`        | The tags of the post.                                                                                                                                                                                       |
-| `category`    | The category of the post.                                                                                                                                                                                   |
-| `draft`        | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
-
-# Where to Place the Post Files
-
-Your post files should be placed in `src/content/posts/` directory. You can also create sub-directories to better organize your posts and assets.
-
-```
-src/content/posts/
-├── post-1.md
-└── post-2/
-    ├── cover.png
-    └── index.md
-```
+# Video
 
 Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.
 
@@ -309,7 +296,6 @@ published: 2023-10-19
 
 <iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 ```
-# Video
 
 ## YouTube
 
