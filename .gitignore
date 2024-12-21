@@ -20,6 +20,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# obsidian folder
+.obsidian/
+
 .vercel
 
 package-lock.json
