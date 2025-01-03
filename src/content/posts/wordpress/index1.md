@@ -4,12 +4,12 @@ published: 2024-09-20
 description: ""
 tags:
   - Wordpress
-category: Wordpress
+category: Guides
 draft: false
 ---
 
 :::caution
-随着时间的推移，文章内容可能过期，请关注网上其他文章的最新动态
+随着时间的推移，文章内容可能过期，请关注网上其他文章的最新动态。
 :::
 
 ## 安装插件

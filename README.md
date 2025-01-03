@@ -49,7 +49,7 @@ lang: jp      # 仅当文章语言与 `config.ts` 中的网站语言不同时需
 下列指令均需要在项目根目录执行：
 
 | Command                           | Action                            |
-|:----------------------------------|:----------------------------------|
+| :-------------------------------- | :-------------------------------- |
 | `pnpm install` 并 `pnpm add sharp` | 安装依赖                              |
 | `pnpm dev`                        | 在 `localhost:4321` 启动本地开发服务器      |
 | `pnpm build`                      | 构建网站至 `./dist/`                   |
@@ -57,3 +57,4 @@ lang: jp      # 仅当文章语言与 `config.ts` 中的网站语言不同时需
 | `pnpm new-post <filename>`        | 创建新文章                             |
 | `pnpm astro ...`                  | 执行 `astro add`, `astro check` 等指令 |
 | `pnpm astro --help`               | 显示 Astro CLI 帮助                   |
+|                                   |                                   |

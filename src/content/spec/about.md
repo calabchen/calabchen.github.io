@@ -1,6 +1,11 @@
 # 关于
 欢迎来到这个小站，这里是半入烟云。
 
+制作的简单安卓APP
+::github{repo="CalabChen/openNews"}
+
+制作的简单Unity2D游戏
+::github{repo="CalabChen/Slime_Adventure"}
 
 # 网站模板
 如果对这个模板感兴趣，欢迎访问原作者的地址：

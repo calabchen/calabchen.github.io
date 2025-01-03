@@ -4,12 +4,12 @@ published: 2024-09-12
 description: ""
 tags:
   - OrangePiZero3
-category: 开发板
+category: 硬件DIY
 draft: false
 ---
 
 :::caution
-随着时间的推移，文章内容可能过期，请关注网上其他文章的最新动态
+随着时间的推移，文章内容可能过期，请关注网上其他文章的最新动态。
 :::
 
 # 香橙派
@@ -64,7 +64,7 @@ sudo apt-get upgrade # 更新本地软件
 ```
 
 小问题：  
-![Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.](picture1.png)  
+![Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.](./picture1.png)  
 Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.  
 首先，这不是一个错误，而是一个警告信息。警告并不会导致程序停止工作，**可以不管**。
 
@@ -73,7 +73,7 @@ Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPR
 `sudo apt-key list`  
 这将显示一个存储在你系统中的巨大的密钥列表。你在这里要做的是寻找与警告信息相关的密钥。
 
-![在这里插入图片描述](picture2.png)
+![在这里插入图片描述](./picture2.png)
 
 ### 配置docker
 
@@ -89,7 +89,7 @@ Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPR
  sudo vim daemon.json
 ```
 
-![在这里插入图片描述](picture3.png)  
+![在这里插入图片描述](./picture3.png)  
 除了这个默认的，添加别的源。  
 保存退出后,用以下命令检查是否生效:
 
@@ -119,7 +119,7 @@ sudo update-binfmts -- enable qemu-x86_64
 docker run hello-world
 ```
 
-![在这里插入图片描述](picture4.png)  
+![在这里插入图片描述](./picture4.png)  
 虽然又警告，但是运行成功！
 
 **其实只用在运行时指定平台类型就没有报错了！命令如下：**  
