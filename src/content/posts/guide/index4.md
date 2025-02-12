@@ -7,7 +7,7 @@ tags:
 category: Guides
 draft: false
 ---
-官方的创建文章的默认方法是`pnpm new-post <filename>`，这样的坏处是只能在 `src/content/posts/` 下创建文章，但是子目录的归档很麻烦。通过运行创建文章的命令发现对应的代码在` scripts/new-post.js `之中。于是本人自行修改了对应的代码：
+这个主题的创建文章的默认方法是`pnpm new-post <filename>`，这样的坏处是只能在 `src/content/posts/` 下创建文章，但是子目录的归档很麻烦。通过运行创建文章的命令发现对应的代码在` scripts/new-post.js `之中。于是本人自行修改了对应的代码：
 ```js
 import fs from "fs";
 import path from "path";
