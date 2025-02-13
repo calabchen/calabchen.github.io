@@ -12,8 +12,7 @@
     "new-post": "node scripts/new-post.js",
     "format": "biome format --write ./src",
     "lint": "biome check --apply ./src",
-    "preinstall": "npx only-allow pnpm",
-    "postinstall": "pnpm install remark-mermaidjs && pnpm add -D playwright && pnpm exec playwright install --with-deps chromium"
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
