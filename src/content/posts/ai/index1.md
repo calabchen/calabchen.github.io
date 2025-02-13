@@ -103,9 +103,9 @@ autopep8 # 用来格式化python代码
 
 # 配置 Python 虚拟环境
 
-比如在我在vscode中创建了一个名字为`torch_py312`的虚拟环境：
+比如在我在vscode中创建了一个名字为`torch_mps_py310`的虚拟环境：
 ```shell
-conda create --name torch_py312 python=3.12
+conda create --name torch_mps_py310 python=3.10
 ```
 然后我在右下角的选择python解释器中选择它，重新打开一个终端，它就被激活了。
 
@@ -121,17 +121,45 @@ wheel      0.45.1
 默认源：
 ```python
 pip config list
-
+# 返回如下：
 global.index-url='https://mirrors.aliyun.com/pypi/simple/'
 ```
-我的默认是阿里源，就不换了。换源请参考网络上别的文章🙏  
-更新一下`pip`：`pip install --upgrade pip` 
+
+我的默认是阿里源，就不换了。如果返回是空的，请换源🙏 。
+指令如下：
+```python
+pip config set global.index-url='https://mirrors.aliyun.com/pypi/simple/'
+```
+
+更新一下`pip`：`pip install --upgrade pip` 或者 `python -m pip install --upgrade pip`(权限不够使用这个)
 
 # 安装 PyTorch
 去到[官网](https://pytorch.org/get-started/locally/)
-选择Stable->Mac->Pip->Python->Default，复制命令并在vscode终端激活的`torch_py312`环境中运行：
+选择Stable->Mac->Pip->Python->Default，复制命令并在vscode终端激活的`torch_mps_py310`环境中运行：
 ```python
 pip3 install torch torchvision torchaudio
+```
+
+安装完后大概有这些包：
+```shell
+Package           Version
+----------------- --------
+filelock          3.17.0
+fsspec            2025.2.0
+Jinja2            3.1.5
+MarkupSafe        3.0.2
+mpmath            1.3.0
+networkx          3.4.2
+numpy             2.2.2
+pillow            11.1.0
+pip               25.0
+setuptools        75.8.0
+sympy             1.13.1
+torch             2.6.0
+torchaudio        2.6.0
+torchvision       0.21.0
+typing_extensions 4.12.2
+wheel             0.45.1
 ```
 
 ## 测试是否成功安装
