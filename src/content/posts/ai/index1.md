@@ -1,6 +1,6 @@
 ---
 title: 在macOS中配置深度学习环境
-published: 2025-02-16
+published: 2025-02-01
 description: 在macOS中配置深度学习环境
 tags:
   - macOS
