@@ -111,6 +111,13 @@ pip config list
 默认返回空，换源🙏 指令如下：
 ```python
 pip config set global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
+pip config set global.extra-index-url https://mirrors.aliyun.com/pypi/simple/
+```
+返回如下：
+```python
+pip config list
+global.extra-index-url='https://mirrors.aliyun.com/pypi/simple/'
+global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
 ```
 
 (可选)更新一下`pip`：`pip install --upgrade pip` 或者 `python -m pip install --upgrade pip`(权限不够使用这个)
@@ -194,6 +201,9 @@ Current GPU name: NVIDIA GeForce RTX 3050 Ti Laptop GPU
 请参考[这篇文章](https://docs.anaconda.net.cn/distro-or-miniconda/)
 
 ## numpy的兼容性问题
-使用pytorch时可以进一步安装`visdom`可视化工具，但是这时候就会显示numpy和torch版本兼容性的问题，我在网上进一步搜索得到`python3.9`<=>`pytorch1.12.0`<=>`numpy1.20.0`。
-这时运行`visdom`就不会有报错。
-可以使用`conda install numpy==1.20.0 scipy`来统一解决环境兼容性问题。
+使用pytorch时可以进一步安装`visdom`可视化工具，但是这时候就会显示numpy和torch版本兼容性的问题，我在网上进一步搜索得到`python3.9`<=>`pytorch1.12.0`<=>`numpy1.20.0-1.23.x`。
+这时运行`visdom`就不会有报错。如果还有报错那就安装完后把vscode关掉再重新打开试试。
+
+> 参考文章：
+> [文章1](https://blog.csdn.net/m0_51647880/article/details/140273540)
+> [文章2](https://matplotlib.org/devdocs/devel/min_dep_policy.html)
