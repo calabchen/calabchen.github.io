@@ -84,13 +84,14 @@ channels:
 Chinese (Simplified) # 简体中文
 Python # 包含Python、Pylance、Python Debugger的整合包
 autopep8 # 用来格式化python代码
+Jupyter #交互式学习pyhton代码
 ```
 
 # 配置 Python 虚拟环境
 
-比如在我在vscode中创建了一个名字为`torch_cuda113_py310`的虚拟环境：
+比如在我在vscode中创建了一个名字为`torch_cuda113_py39`的虚拟环境：
 ```shell
-conda create --name torch_cuda113_py310 python=3.10
+conda create --name torch_cuda113_py39 python=3.9
 ```
 然后我在右下角的选择python解释器中选择它，重新打开一个终端，它就被激活了。
 
@@ -109,16 +110,16 @@ pip config list
 ```
 默认返回空，换源🙏 指令如下：
 ```python
-pip config set global.index-url='https://mirrors.aliyun.com/pypi/simple/'
+pip config set global.index-url='https://pypi.tuna.tsinghua.edu.cn/simple'
 ```
 
-更新一下`pip`：`pip install --upgrade pip` 或者 `python -m pip install --upgrade pip`(权限不够使用这个)
+(可选)更新一下`pip`：`pip install --upgrade pip` 或者 `python -m pip install --upgrade pip`(权限不够使用这个)
 
 # 安装 PyTorch (CUDA 11.3 版本)
 去到[官网](https://pytorch.org/get-started/locally/)
 选择Stable->Mac->Pip->Python->Default，复制命令并在vscode终端激活的`torch_cuda113_py310`环境中运行：
 ```python
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
 安装完后大概有这些包：
@@ -133,9 +134,9 @@ pillow             11.1.0
 pip                25.0.1
 requests           2.32.3
 setuptools         75.8.0
-torch              1.12.1+cu113
-torchaudio         0.12.1+cu113
-torchvision        0.13.1+cu113
+torch              1.12.0+cu113
+torchaudio         0.12.0+cu113
+torchvision        0.13.0+cu113
 typing_extensions  4.12.2
 urllib3            2.3.0
 wheel              0.45.1
@@ -191,3 +192,8 @@ Current GPU name: NVIDIA GeForce RTX 3050 Ti Laptop GPU
 
 ## 对于conda的选择
 请参考[这篇文章](https://docs.anaconda.net.cn/distro-or-miniconda/)
+
+## numpy的兼容性问题
+使用pytorch时可以进一步安装`visdom`可视化工具，但是这时候就会显示numpy和torch版本兼容性的问题，我在网上进一步搜索得到`python3.9`<=>`pytorch1.12.0`<=>`numpy1.20.0`。
+这时运行`visdom`就不会有报错。
+可以使用`conda install numpy==1.20.0 scipy`来统一解决环境兼容性问题。
