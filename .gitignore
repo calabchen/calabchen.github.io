@@ -21,7 +21,7 @@ pnpm-debug.log*
 .DS_Store
 
 # obsidian folder
-.obsidian/
+src/content/.obsidian
 
 .vercel
 
