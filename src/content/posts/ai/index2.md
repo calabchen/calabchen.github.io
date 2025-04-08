@@ -17,7 +17,7 @@ flowchart TD
     C --> D[安装 Anaconda]
     D --> E[安装 VSCode]
     E --> F[配置 Python 虚拟环境]
-    F --> G[安装 PyTorch (CUDA 11.3 版本)]
+    F --> G[安装 PyTorch - CUDA 11.3 版本]
     G --> H[完成]
     style A fill:#f96,stroke:#333,stroke-width:2px
     style H fill:#f96,stroke:#333,stroke-width:2px
